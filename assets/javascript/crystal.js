@@ -61,8 +61,6 @@ var getRandomNumber = function(min, max) {
 
 	console.log(getRandomNumber);
 
-
-
 }
 
 var startGame = function(){
@@ -72,6 +70,8 @@ var startGame = function(){
 var scoreNumber = 0
 
 $("#scoreButton").prepend(scoreNumber);
+
+
 
 // reset the targetNumber the player is trying to achieve  between 19 and 120
 
@@ -87,11 +87,27 @@ $("#targetNumber").prepend(targetNumber);
 
 crystal.purple.value = getRandomNumber(1,12);
 
+console.log(crystal.purple.value);
+
+$("#purple").prepend(crystal.purple.value);
+
+
 crystal.pink.value = 	getRandomNumber(1,12);
 
+console.log(crystal.pink.value);
+
+$("#pink").prepend(crystal.pink.value);
+
 crystal.brown.value = getRandomNumber(1,12);
+console.log(crystal.brown.value)
+
+$("#brown").prepend(crystal.brown.value);
 
 crystal.red.value = getRandomNumber(1,12);
+
+console.log(crystal.red.value)
+
+$("#red").prepend(crystal.red.value);
 
 
 
@@ -110,43 +126,44 @@ console.log("red: " + crystal.red.value);
 
 };
 
+// respond to clicks on the crystal: 
+
+var addValues = function(crystal) {
+
+	scoreNumber = scoreNumber + crystal.value;
+
+	console.log("Your Score: " + scoreNumber) 
+}
 
 $('#purple').click(function() {
 
-   alert ("test");
-
+   addValues(crystal.purple);
 
 });
+
+
 
 
 $('#pink').click(function() {
 
-   alert ("test");
-});
+    addValues(crystal.pink);
+
+ });
 
 
 $('#brown').click(function() {
 
-   alert ("test");
+    addValues(crystal.brown);
 });
+
 
 $('#red').click(function() {
 
-   alert ("test");
+   addValues(crystal.red);
 });
 
+
 startGame();
-
-
-
-
-
-
-
-
-
-
-
 
 
 
