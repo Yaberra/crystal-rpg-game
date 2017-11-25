@@ -1,0 +1,74 @@
+h1 {
+	color: rgb(255,255,255);
+	padding-left: 50px;
+}
+#main {
+	padding-left: 20px; 
+	font-size: 18px;
+	font:"PT+Sans";
+}
+#randomButton {
+	
+	width: 300px;
+	height:100px;
+	background-color: rgb(249,28,104);
+
+}
+
+#winButton {
+	width: 123px;
+	height:100px;
+	background-color: rgb(242,198,197);
+
+}
+
+#loseButton {
+	width: 123px;
+	height:100px;
+	background-color: rgb(242,198,197);
+	
+
+}
+	
+h5 {
+
+	color: rgb(32,33,23);
+
+}
+
+#purpleButton {
+	width: 100px;
+	height: 100px;
+	background-color: rgb(255,255,255);
+}
+
+#pinkButton {
+	
+	width: 100px;
+	height: 100px;
+	background-color: rgb(255,255,255);
+
+}
+
+#brownButton {
+	width: 100px;
+	height: 100px;
+	background-color: rgb(255,255,255);
+
+}
+
+#redButton {
+	width: 100px;
+	height: 100px;
+	background-color: rgb(255,255,255);
+
+}
+
+#scoreButton {
+	background-color: rgb(180,204,232);
+	width:300px;
+	height: 100px;
+
+	
+}
+ 

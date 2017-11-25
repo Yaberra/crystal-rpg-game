@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Crystal Game</title>
+
+	<!-- Added link to the reset stylesheet -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Added google font stylesheet -->
+
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+	<!-- Added link to the reset stylesheet -->
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+	
+	<!-- Added link to the javascript -->
+
+</head>
+
+<body style="background-color:rgb(141, 112,232);">
+	<h1> Crystal Collection </h1>
+	<div class="container">
+		<div class="row">
+		<div class="col-md-7" style="background-color: rgb(184,212,97);">
+			<div id="main">	
+					<div class="row">
+					<p> You will be given a random number at the start of the game. </p>
+
+					<p>There are four crystals below. By clicking on crystal you will add a specific amount of points to your total score.</p>
+
+					<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+
+					<p>The value of each crystal is hidden from you until you click on it. </p>
+
+					<p>Each time when the game starts, the game will change the value of each crystal. </p>	
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+				<!-- Here we have our button with id random-button -->
+					<span><button id="randomButton" class="btn btn-primary btn-lg"></button></span>
+							
+				<!-- Here we have our button with id win-button-->
+					<span><button id="winButton" class="btn btn-primary btn-lg"><h5>Win</h5></button></span>
+
+				<!-- Here we have our button with id lose-button -->
+					<span><button id="loseButton" class="btn btn-primary btn-lg"><h5>Lose</h5></button></span>				
+			</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="crystal-buttons">
+							<!-- Here we have our button with id purplecrystal-button-->
+							<button id="purpleButton" class="btn btn-primary btn-lg"><img src="./assets/images/purplecrystal-button.jpg" style="height: 80px; width: 80px";></button>
+
+							<!-- Here we have our button with id greencrystal-button-->
+							<button id="pinkButton" class="btn btn-primary btn-lg"><img src="./assets/images/pinkcrystal-button.png" style="width: 80px;"></button>
+
+							<!-- Here we have our button with id yellowcrystal-button-->
+							<button id="brownButton" class="btn btn-primary btn-lg"><img src="./assets/images/browncrystal-button.jpg" style="width: 80px;" ></button>
+
+							<!-- Here we have our button with id redcrystal-button-->
+							<button id="redButton" class="btn btn-primary btn-lg"><img src="./assets/images/redcrystal-button.png" style="width: 80px; height: 70px;"></button>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<!-- Here we have our button with id random-button -->
+								<span><button id="scoreButton" class="btn btn-primary btn-lg"><h5>Your total Score is:<h5></button></span>
+							</div>
+						</div>
+							
+					</div>
+				</div>
+			</div>
+
+		
+
+
+	<!-- Added link to the jQuery Library -->
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+    <script src="./assets/javascript/crystal.js"></script>
+
+</body>
+</html>
