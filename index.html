@@ -12,7 +12,7 @@
 
 	<!-- Added google font stylesheet -->
 
-	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
 	<!-- Added link to the reset stylesheet -->
 
@@ -23,62 +23,79 @@
 
 </head>
 
-<body style="background-color:rgb(141, 112,232);">
+<body style="background-color: rgb(194,165,170);">
 	<h1> Crystal Collection </h1>
 	<div class="container">
 		<div class="row">
-		<div class="col-md-7" style="background-color: rgb(184,212,97);">
-			<div id="main">	
+		<div class="col-md-7" style="background-color: rgb(255,227,);">
+			<div id="panel, panel default">
+			 <div id="main">	
 					<div class="row">
-					<p> You will be given a random number at the start of the game. </p>
-
-					<p>There are four crystals below. By clicking on crystal you will add a specific amount of points to your total score.</p>
-
-					<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
-
-					<p>The value of each crystal is hidden from you until you click on it. </p>
-
-					<p>Each time when the game starts, the game will change the value of each crystal. </p>	
-					</div>
+					<p>* You will be given a random number at the start of the game. </p>
+					
+					<p>
+						* There are four crystals below. By clicking on crystal you will add a specific amount of points to your total score.</p>
+					<p>
+						* You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+					<p>
+						* The value of each crystal is hidden from you until you click on it. </p>
+					<p>
+						* You will be given a random number at the start of the game.</p>
+					<p>
+						* Each time when the game starts, the game will change the value of each crystal.</p> 	
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
+			<div class="panel panel default">
+			<div class="col-md-6">
+				<div class="row">
+						<div class="col-md-6">	
+							<span><h3>Target Number</h3>			
 				<!-- Here we have our button with id random-button -->
-					<span><button id="randomButton" class="btn btn-primary btn-lg"></button></span>
-							
+							<span><button id="targetNumber" class="btn btn-primary btn-lg"> </button></span>
+							</div>	
+				
+						<div class="col-md-3">
+						<span><h3>Wins</h3>
+						<br>
 				<!-- Here we have our button with id win-button-->
-					<span><button id="winButton" class="btn btn-primary btn-lg"><h5>Win</h5></button></span>
-
-				<!-- Here we have our button with id lose-button -->
-					<span><button id="loseButton" class="btn btn-primary btn-lg"><h5>Lose</h5></button></span>				
-			</div>
+						<button id="winsButton" class="btn btn-primary btn-lg"></button></span>
+						</div>
+				
+						<div class="col-md-3">
+						<span><h3>Losses</h3>
+						<br>
+				<!-- Here we have our button with id lose-button -->		
+						<button id="lossesButton" class="btn btn-primary btn-lg"></button></span>	
+					</div>			
+				</div>
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="crystal-buttons">
+							<div class="crystal-buttons" style="align-content: center;">
 							<!-- Here we have our button with id purplecrystal-button-->
-							<button id="purpleButton" class="btn btn-primary btn-lg"><img src="./assets/images/purplecrystal-button.jpg" style="height: 80px; width: 80px";></button>
+							<button id="purple" class="btn btn-primary btn-lg"><img src="./assets/images/purplecrystal-button.jpg" style="height: 80px; width: 80px";></button>
 
 							<!-- Here we have our button with id greencrystal-button-->
-							<button id="pinkButton" class="btn btn-primary btn-lg"><img src="./assets/images/pinkcrystal-button.png" style="width: 80px;"></button>
+							<button id="pink" class="btn btn-primary btn-lg"><img src="./assets/images/pinkcrystal-button.png" style="width: 80px;"></button>
 
 							<!-- Here we have our button with id yellowcrystal-button-->
-							<button id="brownButton" class="btn btn-primary btn-lg"><img src="./assets/images/browncrystal-button.jpg" style="width: 80px;" ></button>
+							<button id="brown" class="btn btn-primary btn-lg"><img src="./assets/images/browncrystal-button.jpg" style="width: 80px;" ></button>
 
 							<!-- Here we have our button with id redcrystal-button-->
-							<button id="redButton" class="btn btn-primary btn-lg"><img src="./assets/images/redcrystal-button.png" style="width: 80px; height: 70px;"></button>
+							<button id="red" class="btn btn-primary btn-lg"><img src="./assets/images/redcrystal-button.png" style="width: 80px; height: 70px;"></button>
+							</div>
 						</div>
-					</div>
-
+				</div>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
 								<!-- Here we have our button with id random-button -->
-								<span><button id="scoreButton" class="btn btn-primary btn-lg"><h5>Your total Score is:<h5></button></span>
+								<h3>Your Score:<h3>
+								<button id="scoreButton" class="btn btn-primary btn-lg"></button>
 							</div>
 						</div>
 							
@@ -87,8 +104,6 @@
 			</div>
 
 		
-
-
 	<!-- Added link to the jQuery Library -->
 	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -1,73 +1,100 @@
 h1 {
 	color: rgb(255,255,255);
 	padding-left: 50px;
+	font-family: 'Slabo 27px', serif;
+
 }
+
 #main {
 	padding-left: 20px; 
 	font-size: 18px;
-	font:"PT+Sans";
-}
-#randomButton {
+	font-family: 'Slabo 27px', serif;
 	
-	width: 300px;
-	height:100px;
+
+}
+#targetNumber {
+	
+	width: 250px;
+	height:150px;
 	background-color: rgb(249,28,104);
+	float: left;
+	margin-top: 20px;
+	padding-left:20px;
 
 }
 
-#winButton {
-	width: 123px;
-	height:100px;
+#lossesButton {
+	
+	width: 100px;
+	height:80px;
 	background-color: rgb(242,198,197);
+	font-family: 'Slabo 27px', serif;
+	font-size: 25px;
+	float: left;
+	
 
 }
 
-#loseButton {
-	width: 123px;
-	height:100px;
+#winsButton {
+	width: 100px;
+	height:80px;
 	background-color: rgb(242,198,197);
+	font-family: 'Slabo 27px', serif;
+	text-align: top;
+	float: left;
+	
 	
 
 }
 	
-h5 {
+h3 {
 
 	color: rgb(32,33,23);
+	font-family: 'Slabo 27px', serif;
+	margin-bottom: 0;
 
 }
 
-#purpleButton {
+#purple {
 	width: 100px;
 	height: 100px;
 	background-color: rgb(255,255,255);
+	margin-top: 20px;
+
 }
 
-#pinkButton {
+#pink {
 	
 	width: 100px;
 	height: 100px;
 	background-color: rgb(255,255,255);
+	margin-top: 20px;
 
 }
 
-#brownButton {
+#brown {
 	width: 100px;
 	height: 100px;
 	background-color: rgb(255,255,255);
+	margin-top: 20px;
 
 }
 
-#redButton {
+#red {
 	width: 100px;
 	height: 100px;
 	background-color: rgb(255,255,255);
+	margin-top: 20px; 
 
 }
 
 #scoreButton {
 	background-color: rgb(180,204,232);
-	width:300px;
+	width:250px;
 	height: 100px;
+	font-family: 'Slabo 27px', serif;
+	margin-top: 5px;
+
 
 	
 }

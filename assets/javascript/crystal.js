@@ -1,28 +1,233 @@
-// console.log("working");
-
-// The player will have to guess the answer with numbers 
-
 $(document).ready(function() {
 
-var numberArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32]
 
-console.log(numberArray);
+// Variables 
+// ---------------------------------------------------------------------------------------------------------------
 
-})
+var crystal = {
 
-// for(i=0; i<numberArray.length; i++); 
+purple:
 
-	// console.log([i]);
+{
+ 	name:"purple",
+ 	value:0 
+},
 
-// });
 
-// $("#random-button").on("click", function(){
+pink:
 
- // var random-button=Math.floor(Math.random () *random-button.length);
-	// }
+{
+	name:"pink",
+ 	value:0 
 
+},
+
+
+brown:
+
+{	
+	name:"brown",
+	value:0 
+
+},
+
+
+red:	
+
+{
+
+	name:"red",
+ 	value:0 
+
+},
+
+};
+
+var scoreNumber = 0
+
+var targetNumber = 0
+
+var wins = 0
+
+var losses = 0
+
+
+
+Functions: 
+
+var getRandomNumber = function(min, max) {
+	
+	return Math.floor(Math.random() * (max - min +1)) + min;
+
+	console.log(getRandomNumber);
+
+
+
+}
+
+var startGame = function(){
+
+// reset the scoreNumber for the person playing 
+
+var scoreNumber = 0
+
+$("#scoreButton").prepend(scoreNumber);
+
+// reset the targetNumber the player is trying to achieve  between 19 and 120
+
+targetNumber = getRandomNumber(19,120);
+
+console.log(targetNumber);
+
+$("#targetNumber").prepend(targetNumber);
+
+
+
+// set different values for each of the crystals between 1 and 12
+
+crystal.purple.value = getRandomNumber(1,12);
+
+crystal.pink.value = 	getRandomNumber(1,12);
+
+crystal.brown.value = getRandomNumber(1,12);
+
+crystal.red.value = getRandomNumber(1,12);
+
+
+
+$("scoreButton").html(scoreNumber);
+
+console.log("Target Number: " + targetNumber);                     
+
+
+console.log("purple:"  + crystal.purple.value);
+
+console.log("pink: " + crystal.pink.value);
+
+console.log("brown: " + crystal.brown.value);
+
+console.log("red: " + crystal.red.value); 
+
+};
+
+
+$('#purple').click(function() {
+
+   alert ("test");
+
+
+});
+
+
+$('#pink').click(function() {
+
+   alert ("test");
+});
+
+
+$('#brown').click(function() {
+
+   alert ("test");
+});
+
+$('#red').click(function() {
+
+   alert ("test");
+});
+
+startGame();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+	// pinkButton: {
+					// name: "pinkButton",
+					// value: 0
+
+// },
+
+	// brownButton: {
+					// name: "brownButton",
+					// value: 0
+
+// },
+
+
+	// redButton: {
+				
+					// name: "redButton",
+					// value: 0
+
+// },
 
 // }
+
+// variable to keep track of scores: 
+
+// var scoreButton = 0 ;
+
+// var targetNumber = 0 ;
+
+// variable to track wins and losses 
+
+// var winsButton = 0 ;
+
+// var lossesButton = 0 ;
+
+
+
+// Functions 
+// -----------------------------------------------------------------------------------------------------------------
+
+// When random-button is clicked...
+
+      // $("#random-button").on("click", function() {
+
+        // Create a string which will hold the target number
+        // var targetNumber = "";
+
+        // Then initiate a loop to generate 9 separate numbers
+        // for (var i = 0; i < 34; i++) {
+
+          // For each iteration, generate a new random number between 1 and 9.
+          // var random = Math.floor(Math.random() * numberArray.length) + 1;
+
+          // Take this number and then add it to the rest of the string.
+          // In essence, we are iteratively building a string of numbers. (e.g. First: 1, Second: 13, Third: 135, etc.)
+          // targetNumber = random + targetNumber;
+
+        // }
+
+        // Once we have our final lotto number, we'll prepend it to the top of our random-number div.
+        // $("#randomNumber").prepend("<br><hr>" + targetNumber);
+
+        // console.log(targetNumber)
+
+      // });
+
+    // });
+
+// Game 
+// --------------------------------------------------------------------------------------------------------------------------
+
+
+// $("#randomButton").on ("click", function(){
+
+ // var randomButton = Math.floor(Math.random (i) * numberArray.length);
+ 	
+ // console.log(randomButton);
 
 // The random number shown at the start of the game should be between 19 - 120.
 
