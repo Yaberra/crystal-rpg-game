@@ -132,7 +132,9 @@ var addValues = function(crystal) {
 
 	scoreNumber = scoreNumber + crystal.value;
 
-	console.log("Your Score: " + scoreNumber) 
+	$("#scoreButton").html(scoreNumber);
+
+	// console.log("Your Score: " + scoreNumber) 
 }
 
 $('#purple').click(function() {
