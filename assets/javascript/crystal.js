@@ -82,7 +82,6 @@ console.log(targetNumber);
 $("#targetNumber").prepend(targetNumber);
 
 
-
 // set different values for each of the crystals between 1 and 12
 
 crystal.purple.value = getRandomNumber(1,12);
@@ -134,16 +133,48 @@ var addValues = function(crystal) {
 
 	$("#scoreButton").html(scoreNumber);
 
+	checkWin();
+
 	// console.log("Your Score: " + scoreNumber) 
 }
+//  call the checkwin function
+
+// check if player won or lost and reset the game
+
+var checkWin = function() {
+
+if(scoreNumber > targetNumber) {
+	
+	alert("Oops ...try again!");
+	
+	console.log("Try again");
+
+	lossesButton++;
+
+	$("#lossesButton").html(lossesButton);
+
+}
+  else if(scoreNumber === targetNumber){
+  	
+  	alert("Awesome! You Won!")
+  
+  	console.log("You Won");
+
+  	winsButton++;
+
+  	$("#winsButton").html(winsButton);
+
+  }
+
+}
+
+
 
 $('#purple').click(function() {
 
    addValues(crystal.purple);
 
 });
-
-
 
 
 $('#pink').click(function() {
@@ -170,6 +201,7 @@ startGame();
 
 
 });
+
 
 	// pinkButton: {
 					// name: "pinkButton",
