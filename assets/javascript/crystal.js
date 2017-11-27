@@ -47,9 +47,9 @@ var scoreNumber = 0
 
 var targetNumber = 0
 
-var wins = 0
+var winsButton = 0
 
-var losses = 0
+var lossesButton = 0
 
 
 
