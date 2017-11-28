@@ -1,312 +1,284 @@
 $(document).ready(function() {
 
 
-// Variables 
-// ---------------------------------------------------------------------------------------------------------------
+// Variables
+// ______________________________________________________________________________________________________________________________________-
+
+// Created  the Global shared wariables that will be called into functions later on in the game.  
+
+// There are four crystals displayed as buttons on the page.
+
+// Created an object for all crystals and assigned a name and value starting at 0. 
 
 var crystal = {
 
-purple:
+			purple:
 
-{
- 	name:"purple",
- 	value:0 
-},
-
-
-pink:
-
-{
-	name:"pink",
- 	value:0 
-
-},
+		{
+ 			name:"purple",
+ 			value:0 
+		},
 
 
-brown:
+			pink:
 
-{	
-	name:"brown",
-	value:0 
+		{
+			name:"pink",
+ 			value:0 
 
-},
+		},
 
 
-red:	
+		brown:
 
-{
+		{	
+			name:"brown",
+			value:0 
 
-	name:"red",
- 	value:0 
+		},
 
-},
 
-};
+		red:	
+
+		{
+
+			name:"red",
+ 			value:0 
+
+		},
+
+		};
+
+
+//  created a variable to count the players score set to zero.
 
 var scoreNumber = 0
 
+// created a vtargetNumber variable to display the random target number the player is attempting to match. Set it to zero.
+
 var targetNumber = 0
 
+//  created a winsButton to count the number of times the player matched the targetNumber. This is also set to zero. 
+
 var winsButton = 0
+
+//  created a lossesButton for everytime the player's score went above the targetNumber in which case the player looses a point, set to Zero, 
 
 var lossesButton = 0
 
 
+// Functions: 
 
-Functions: 
+// ______________________________________________________________________________________________________________________________________
+
+// The player will be shown a random number at the start of the game. 
+
+// The number will have a value between 19 and 120.
+
+// There are four crystal buttons that will have a random value, that will not be displayed. 
+
+// Each time a player loses or wins the crytal buttons reset to a random number between 1 and 12
+
+// We'll need to create a get random number for the target number and the four crystals. 
+
+//Create a reusable function that will pull a random number variable for the target number and crystals between max and min.
 
 var getRandomNumber = function(min, max) {
 	
-	return Math.floor(Math.random() * (max - min +1)) + min;
+			return Math.floor(Math.random() * (max - min +1)) + min;
 
-	console.log(getRandomNumber);
+			console.log(getRandomNumber);
 
-}
+			}
+// The score button will display and add the value of the crytal buttons on click
+
+// The player clicks the crystal buttons to match the target number if the number goes over the target number displayed the player looses 
+// If the crystal balls clicked add up to equal the target number then the player wins 
+
+// Game
+// ______________________________________________________________________________________________________________________________________
+
+//  This function starts and restarts the game. 
+
 
 var startGame = function(){
 
-// reset the scoreNumber for the person playing 
+// reset the scoreNumber to zero 
 
-var scoreNumber = 0
+		scoreNumber = 0
 
-$("#scoreButton").prepend(scoreNumber);
+// set the target number score between 19 and 120
 
+		targetNumber = getRandomNumber(19,120);
 
+// check if this working 
 
-// reset the targetNumber the player is trying to achieve  between 19 and 120
+		console.log(targetNumber);
 
-targetNumber = getRandomNumber(19,120);
+// Reflect the changes in the hml document by preappending to the scoreButton 
 
-console.log(targetNumber);
+// Set the values for purple crystal between 1 and 12
 
-$("#targetNumber").prepend(targetNumber);
+		crystal.purple.value = getRandomNumber(1,12);
 
+// check if this working 
+		console.log(crystal.purple.value);
 
-// set different values for each of the crystals between 1 and 12
+// Set the values for pink crystal between 1 and 12
 
-crystal.purple.value = getRandomNumber(1,12);
+		crystal.pink.value = getRandomNumber(1,12);
 
-console.log(crystal.purple.value);
+// check if this working 
 
-$("#purple").prepend(crystal.purple.value);
+		console.log(crystal.pink.value);
 
-
-crystal.pink.value = 	getRandomNumber(1,12);
-
-console.log(crystal.pink.value);
-
-$("#pink").prepend(crystal.pink.value);
-
-crystal.brown.value = getRandomNumber(1,12);
-console.log(crystal.brown.value)
-
-$("#brown").prepend(crystal.brown.value);
-
-crystal.red.value = getRandomNumber(1,12);
-
-console.log(crystal.red.value)
-
-$("#red").prepend(crystal.red.value);
+// Set the values for brown crystal between 1 and 12
 
 
+		crystal.brown.value = getRandomNumber(1,12);
 
-$("scoreButton").html(scoreNumber);
+// check if this working 
 
-console.log("Target Number: " + targetNumber);                     
+		console.log(crystal.brown.value)
+
+// Set the values for red crystal between 1 and 12
+
+		crystal.red.value = getRandomNumber(1,12);
+
+// check if this working 
+
+		console.log(crystal.red.value)
 
 
-console.log("purple:"  + crystal.purple.value);
+// update Reflect the changes in the hml document by preappending to the scoreButton 
 
-console.log("pink: " + crystal.pink.value);
+	$("scoreButton").html(scoreNumber);
 
-console.log("brown: " + crystal.brown.value);
+	$("#targetNumber").html(targetNumber);
 
-console.log("red: " + crystal.red.value); 
+
+// Console log to make sure this works
+
+
+//  The startGame function starts and restarts the game
+
+// _______________________________________________________________________________________________________________________________
+
+// 
+
+		console.log("Target Number: " + targetNumber);                     
+
+
+		console.log("purple:"  + crystal.purple.value);
+
+		console.log("pink: " + crystal.pink.value);
+
+		console.log("brown: " + crystal.brown.value);
+
+		console.log("red: " + crystal.red.value); 
 
 };
 
-// respond to clicks on the crystal: 
+// _________________________________________________________________________________________________________________________________
+
+// Main part of the game:
+
+
+//  To do this pass the crystal object value above as a function for a new add value variable 
+
+
+startGame();
+
+//  First create a function that adds value to scoreButton starts at zero then ++win or ++lose
+
+//  To do this pass the crystal object value above as a function for a new add value variable 
 
 var addValues = function(crystal) {
 
-	scoreNumber = scoreNumber + crystal.value;
+		scoreNumber = scoreNumber + crystal.value;
 
-	$("#scoreButton").html(scoreNumber);
+//  Reflect the changes on the html 
 
-	checkWin();
+		$("#scoreButton").html(scoreNumber);
 
-	// console.log("Your Score: " + scoreNumber) 
+// next we want to create a function that checks for wins and losses 
+
+checkWin();
+
 }
-//  call the checkwin function
 
-// check if player won or lost and reset the game
+// we want to see if the player won or lost the game and reset the game to start
 
-var checkWin = function() {
+// if the player's score number is greater than the target number the player loses
 
-if(scoreNumber > targetNumber) {
+	var checkWin = function() {
+
+		if(scoreNumber > targetNumber) {
+
+// if confirm then change the scoreNumber to 0
 	
-	alert("Oops ...try again!");
+		alert("Oops ...try again!");
 	
-	console.log("Try again");
+		console.log("Try again");
 
-	lossesButton++;
+// add to the lossesButton 
 
-	$("#lossesButton").html(lossesButton);
+		lossesButton++;
+
+// Reflect the updated score in the html 
+
+		$("#lossesButton").html(lossesButton);
+
+// then reset the score button to 0
+
+		startGame();
+
 
 }
   else if(scoreNumber === targetNumber){
   	
-  	alert("Awesome! You Won!")
+  		alert("Awesome! You Won!")
   
-  	console.log("You Won");
+	  	console.log("You Won");
 
-  	winsButton++;
+  		winsButton++;
 
-  	$("#winsButton").html(winsButton);
+  		$("#winsButton").html(winsButton);
+
+  		startGame();
 
   }
 
 }
 
+//  Then add the value to each crystals when they are clicked
+
+		$('#purple').click(function() {
+
+   		addValues(crystal.purple);
+
+		});
 
 
-$('#purple').click(function() {
+		$('#pink').click(function() {
 
-   addValues(crystal.purple);
+    	addValues(crystal.pink);
 
-});
-
-
-$('#pink').click(function() {
-
-    addValues(crystal.pink);
-
- });
+ 		});
 
 
-$('#brown').click(function() {
+		$('#brown').click(function() {
 
-    addValues(crystal.brown);
-});
+    	addValues(crystal.brown);
+		});
 
 
-$('#red').click(function() {
+		$('#red').click(function() {
 
-   addValues(crystal.red);
-});
+   		addValues(crystal.red);
 
+		});
 
 startGame();
 
-
-
 });
-
-
-	// pinkButton: {
-					// name: "pinkButton",
-					// value: 0
-
-// },
-
-	// brownButton: {
-					// name: "brownButton",
-					// value: 0
-
-// },
-
-
-	// redButton: {
-				
-					// name: "redButton",
-					// value: 0
-
-// },
-
-// }
-
-// variable to keep track of scores: 
-
-// var scoreButton = 0 ;
-
-// var targetNumber = 0 ;
-
-// variable to track wins and losses 
-
-// var winsButton = 0 ;
-
-// var lossesButton = 0 ;
-
-
-
-// Functions 
-// -----------------------------------------------------------------------------------------------------------------
-
-// When random-button is clicked...
-
-      // $("#random-button").on("click", function() {
-
-        // Create a string which will hold the target number
-        // var targetNumber = "";
-
-        // Then initiate a loop to generate 9 separate numbers
-        // for (var i = 0; i < 34; i++) {
-
-          // For each iteration, generate a new random number between 1 and 9.
-          // var random = Math.floor(Math.random() * numberArray.length) + 1;
-
-          // Take this number and then add it to the rest of the string.
-          // In essence, we are iteratively building a string of numbers. (e.g. First: 1, Second: 13, Third: 135, etc.)
-          // targetNumber = random + targetNumber;
-
-        // }
-
-        // Once we have our final lotto number, we'll prepend it to the top of our random-number div.
-        // $("#randomNumber").prepend("<br><hr>" + targetNumber);
-
-        // console.log(targetNumber)
-
-      // });
-
-    // });
-
-// Game 
-// --------------------------------------------------------------------------------------------------------------------------
-
-
-// $("#randomButton").on ("click", function(){
-
- // var randomButton = Math.floor(Math.random (i) * numberArray.length);
- 	
- // console.log(randomButton);
-
-// The random number shown at the start of the game should be between 19 - 120.
-
-// Each crystal should have a random hidden value between 1 - 12.
-
-// The random number shown at the start of the game should be between 19 - 120.
-
-// Each crystal should have a random hidden value between 1 - 12. 
-
-// There will be four crystals displayed as buttons on the page.
-
-// The player will be shown a random number at the start of the game.
-
-// When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
-
-// our game will hide this amount until the player clicks a crystal.
-
-// When they do click one, update the player's score counter.
-
-// The player wins if their total score matches the random number from the beginning of the game.
-
-// The player loses if their score goes above the random number.
-
-// The game restarts whenever the player wins or loses.
-
-// When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
-
- // The app should show the number of games the player wins and loses.
-
- // To that end, do not refresh the page as a means to restart the game.
-
