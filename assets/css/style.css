@@ -1,0 +1,121 @@
+h1 {
+	color: rgb(255,255,255);
+	padding-left: 50px;
+	font-family: 'Slabo 27px', serif;
+
+}
+
+body {
+
+	background-image: url(assets/images/background.jpg) no-repeat;
+	z-index: -1;
+	top:0;
+	left: 0;
+	background-size:cover;
+	position: absolute;
+	
+}
+
+#main {
+	padding-left: 20px; 
+	font-size: 18px;
+	font-family: 'Slabo 27px', serif;
+	background-color: rgb(255,255,255);
+	
+
+}
+#targetNumber {
+	
+	width: 250px;
+	height:150px;
+	background-color: rgb(249,28,104);
+	float: left;
+	margin-top: 20px;
+	padding-left:20px;
+	font-size: 50px;
+
+
+}
+
+#lossesButton {
+	
+	width: 100px;
+	height:80px;
+	background-color: rgb(242,198,197);
+	font-family: 'Slabo 27px', serif;
+	font-size: 30px;
+	float: left;
+
+	
+
+}
+
+#winsButton {
+	width: 100px;
+	height:80px;
+	background-color: rgb(242,198,197);
+	font-family: 'Slabo 27px', serif;
+	text-align: top;
+	float: left;
+	font-size: 30px;
+	
+	
+
+}
+	
+h3 {
+
+	color: rgb(32,33,23);
+	font-family: 'Slabo 27px', serif;
+	margin-bottom: 0;
+
+}
+
+#purple {
+	width: 100px;
+	height: 100px;
+	background-color: rgb(255,255,255);
+	margin-top: 20px;
+	font:color:(194,165,170);
+
+}
+
+#pink {
+	
+	width: 100px;
+	height: 100px;
+	background-color: rgb(255,255,255);
+	margin-top: 20px;
+	font:color:(194,165,170);
+
+}
+
+#brown {
+	width: 100px;
+	height: 100px;
+	background-color: rgb(255,255,255);
+	margin-top: 20px;
+	font:color:(194,165,170);
+	
+}
+
+#red {
+	width: 100px;
+	height: 100px;
+	background-color: rgb(255,255,255);
+	margin-top: 20px; 
+	font:color:(194,165,170);
+
+}
+
+#scoreButton {
+	background-color: rgb(180,204,232);
+	width:250px;
+	height: 100px;
+	font-family: 'Slabo 27px', serif;
+	margin-top: 5px;
+	font-size: 50px;
+
+	
+}
+ 
